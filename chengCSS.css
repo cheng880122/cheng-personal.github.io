@@ -1,319 +1,247 @@
-html{
-			height: 100%;
-			font-family:微軟正黑體;
+body{
+  	/*justify-content: center;*/
+  	font-family: "Microsoft JhengHei";
 }
 div.bg{
-			position: fixed;
-			top:0;
-			left: 0;
-			bottom:0;
-			right:0;
-			z-index:-1000;
+	background-color: #002244;
+	width: 1150px;
+	height: 1400px;
+	padding-top: 1.9%;
 }
-img.bg{
-			opacity: 1.0;
-			min-width: 100%;
-			min-height: 300px;
-			width: 80%;
+div.border{
+	border: 6px solid #B0B7BC;
+    width: 1080px;
+	height: 1310px;
+	margin-top: 15px;
+	display: flex;
 }
-img.dsilogo{
-			width: 130px;
-			height: 130px;
-			float:left;
+div.ls{
+	color: white;
+	padding-left: 3%; 
+	margin-top: 2%;
+	margin-bottom: 2%;
+	height: auto;
+	width: 340px;
+	text-align: left;
+	flex:6;	
+	border-right: 3px solid #B0B7BC;
 }
-div.view{
-			width:160px;
-			height:90px;
-			float:right;
-			text-align: center;
-		}
-div.view:hover{
-			background-color: #D8D3D3;		
-			color:#000000;
-		}
-nav.top{
-			width: 1400px;
-			height:130px;
-			background-color:#87CEEB;
-			margin-top: 3%;
-		}
-a{
-            font-size: 30px;
-            color:white;
-            text-decoration:none;
-		}
-.slider_container {
-  margin: 30px auto;
-  width: 900px;
-  height: 600px;
-  position: relative;
-  border: 20px solid;
-  border-color: #fff;
-  border-bottom-width: 100px;
-  background-color: #f5f5f5;
-  box-shadow: #666 0 0 5px;
-  box-sizing: content-box;
+div.rs{
+	flex:6;
+	color: white;
+	padding-left: 3%; 
+	margin-top: 2%;
+	margin-bottom: 2%;
+	height: auto;
+	width: 340px;
+	text-align: left;
 }
-.slider_container div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-animation: round 25s linear infinite;
-  animation: round 25s linear infinite;
+.selfpic{
+	margin-top: -2%;
 }
-.slider_container div img {
-  width: 100%;
-  height: auto;
-  display: block;
+input.button{
+	border:2px solid #B0B7BC;
+	background-color: #C60C30;
+	color: #ffffff;
+	border-radius: 10px;
+	cursor: pointer;
+	font-family: "Microsoft JhengHei";
+	font-size: 19px;
+	font-weight: bold;
 }
-@-webkit-keyframes round {
-  4% {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    /* 0 - 1秒 淡入*/
-  }
-  20% {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    /* 1- 5秒靜止*/
-  }
-  24% {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    /* 5-6秒淡出*/
-  }
+input:hover{
+	color: #C60C30;
+	background-color: #B0B7BC;
+	border:2px solid #ffffff;
+	font-weight: bold;
+	padding:0.5% 1%;
+	text-decoration:none;
+	font-size: 19px;
+	transition: 0.5s;
 }
-@keyframes round {
-  4% {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    /* 0 - 1秒 淡入*/
-  }
-  20% {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    /* 1- 5秒靜止*/
-  }
-  24% {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    /* 5-6秒淡出*/
-  }
+h1{
+	font-size: 40px;
 }
-.slider_container div:nth-child(5) {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
+h2{
+	border-bottom: 3px solid #C60C30;
+	width: 255px;
 }
-.slider_container div:nth-child(4) {
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
+p.skill{
+	font-size: 19px;
+	font-weight: bold;
 }
-.slider_container div:nth-child(3) {
-  -webkit-animation-delay: 10s;
-  animation-delay: 10s;
+.skillbar {
+  	width: 350px;
+  	height: 20px;
+  	background-color: #ddd;
+  	border-radius: 50px;
 }
-.slider_container div:nth-child(2) {
-  -webkit-animation-delay: 15s;
-  animation-delay: 15s;
+.skills {
+  	text-align: right;
+  	color: black;
+  	height: 20px;
+  	border-radius: 50px 0px 0px 50px ;
+  	font-weight: bold;
+  	padding-right: 2%;
 }
-.slider_container div:nth-child(1) {
-  -webkit-animation-delay: 20s;
-  animation-delay: 20s;
+@keyframes skill80 {
+	0% {width: 0%}
+	100% {width: 80%}
 }
-.slider_container span {
-  color: #000;
-  background: #fff;
-  position: absolute;
-  left: 0%;
-  top: 280px;
-  width: 400px;
-  height: 100px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 100px;
-  -webkit-transform: scaleY(0);
-  -ms-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+@keyframes skill75 {
+	0% {width: 0%}
+	100% {width: 75%}
 }
-.slider_container:hover span {
-  width: 100%;
-  -webkit-transform: scaleY(1);
-  -ms-transform: scaleY(1);
-  transform: scaleY(1);
+@keyframes skill70 {
+	0% {width: 0%}
+	100% {width: 70%}
 }
-.slider_container:hover div {
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
+@keyframes skill60 {
+	0% {width: 0%}
+	100% {width: 60%}
 }
-.rwd_slider_container_wrapper {
-  width: 440px;
-  max-width: 100%;
-  box-sizing: border-box;
-  box-shadow: #666 0 0 5px;
-  padding: 20px;
-  margin: 0 auto;
+div.a1{
+	animation-name: skill75;
+	animation-duration: 3s;
+	width: 75%;
+	background-color:#C60C30;
 }
-.rwd_slider_container {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  box-sizing: border-box;
-  padding-bottom: calc(70% + 100px);
+div.a2{
+	animation-name: skill75;
+	animation-duration: 3s;
+	width: 75%;
+	background-color:#C60C30;
 }
-.rwd_slider_container .slider_container {
-  box-shadow: none;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  border: none;
-  background-color: transparent;
+div.a3{
+	animation-name: skill70;
+	animation-duration: 3s;
+	width: 70%;
+	background-color:#C60C30;
 }
-.rwd_slider_container .slider_container div {
-  width: 100%;
-  line-height: 0;
+div.a4{
+	animation-name: skill80;
+	animation-duration: 3s;
+	width: 80%;
+	background-color:#C60C30;
 }
-.rwd_slider_container .slider_container span {
-  top: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+div.a5{
+	animation-name: skill70;
+	animation-duration: 3s;
+	width: 70%;
+	background-color:#C60C30;
+}
+div.a6{
+	animation-name: skill75;
+	animation-duration: 3s;
+	width: 75%;
+	background-color:#C60C30;
+}
+div.a7{
+	animation-name: skill70;
+	animation-duration: 3s;
+	width: 70%;
+	background-color:#C60C30;
+}
+div.a8{
+	animation-name: skill75;
+	animation-duration: 3s;
+	width: 75%;
+	background-color:#C60C30;
+}
+*{ 
+  	box-sizing: border-box;
 }
 
-.information{
-	width: 1151.5px;
-	background-color: white;
-	height: 450px;
-	top: 60px;
-	position: relative;
-	margin:20 auto;
-	border-radius: 15px;
-}
-.b1-blank{
-	width: 400px;
-	height: 250px;
-	background-color: #87CEEB;
-	display: inline-block;
-	position: absolute;
-}
-img.myself{
-	background-position:;
-	background-repeat: no-repeat;
-	background-size:cover;
-	background-color: #87CEEB;
-	overflow: hidden;
-}
-img.myself {
-	width: 700px;
-	height: 500px
-	text-align: left;
-	position: absolute;
-	left: 0px;
-}
-.b1-word{
-	font-size: 12px;
-	text-align: left;
-	padding: 60px;
-	margin-left: 50px;
-	color:#000000;
-}
-.b1-wN{/*姓名*/
-	font-size: 25px;
-}
-.b1-w1{/*標題*/
-	font-size: 18px;
-}
-.b1-w2{/*內容*/
-	font-size: 15px;
-}
-.contactme{
-	border-style: outset;
-	width: 500px;
-	height: 320px;
-	display: inline-block;
-	background-color: #87CEEB;
-	margin: 100px;
-	border-radius: 15px;
-}
-.interests{
-	width: 700px;
-	height: 230px;
-	background-color: #87CEEB;
-	text-align: center;
-	padding: 0px;
-	margin-top: -80px;
-	border-radius: 15px;
-}
-.c1-icon{
-	display: inline-flex;
-	background-color: #87CEEB;
-    cursor: pointer;
-	margin-right:10 auto;
-	border-spacing: 20px;
-}
-.goal{
-	width: 700px;
-	height: 200px;
-	background-color: #87CEEB;
-	text-align: left;
-	padding: 0px;
-	margin-top: 0px;
-	border-radius: 15px;
-}
-.life{
-	width: 1800px;
-	height: 750px;
-    background-color: #87CEEB;
-    border-radius: 15px;
-    text-align: center;
-}
-.comment {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:672px;
-	height:504px;
-    background: rgb(101, 101, 101, 0.6);
-    color: #ffffff;
-    opacity: 0;
-    margin: 550px 450px;
-}
-div.life a:hover .comment {
-    opacity: 1;           
-}
-	.a{
-		float:left;
-}
-	.b{
-		float:right;
-}
-img.up{
-	width:80px;
-			height:80px;
-}
-div.up{
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	width:80px;
-	height:80px;
+
+/*-----------timeline-------------*/
+.timeline-small {
+           width: 400px;
+            height: 680px;
+            overflow: hidden;
+            margin: 30px auto 0;
+            box-shadow: 0 0 40px #a0a0a0;
+            font-family:"Microsoft JhengHei";
+            font-size:20.5px;
+        }
+        .timeline-small-body ul {
+            padding: 1em 0 0 2em;
+            margin: 0;
+            list-style: none;
+            position: relative;
+        }
+        .timeline-small-body ul::before {
+            content: ' ';
+            height: 100%;
+            width: 5px;
+            background-color: #d9d9d9;
+            position: absolute;
+            top: 0;
+            left: 2.4em;
+            z-index: -1;
+        }
+        .timeline-small-body li div {
+            display: inline-block;
+            margin: 1em 0;
+            vertical-align: top;
+        }
+        .timeline-small-body .bullet {
+            width: 1rem;
+            height: 1rem;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background: #fff;
+            z-index: 1;
+            margin-right: 1rem;
+            margin-top: 7%;
+			margin-right: 5px;
+        }
+        .timeline-small-body .bullet.pink {
+            background-color: hotpink;
+            border: 3px solid #F93B69;
+        }
+        .timeline-small-body .bullet.green {
+            background-color: #45FF45;
+            border: 3px solid #B5FFB5;
+        }
+        .timeline-small-body .bullet.blue {
+            background-color: aquamarine;
+            border: 3px solid cadetblue;
+        }
+        .timeline-small-body .bullet.orange {
+            background-color: salmon;
+            border: 3px solid #EB8B6E;
+        }
+        .timeline-small-body .date {
+            width: 35%;
+            font-size: 0.8em;
+            padding-top: 0.40rem;
+            padding-right: 2rem;
 			
+			
+        }
+        .timeline-small-body .desc {
+            width: 50%;
+        }
+        .timeline-small-body h3 {
+            font-size: 0.9em;
+            font-weight: 400;
+            margin: 0;
+        }
+        .timeline-small-body h4 {
+            margin: 0;
+            font-size: 0.7em;
+            font-weight: 400;
+            color: #808080;
+        }
+p.work{
+	font-size: 23px;
+	font-weight: bold;
 }
-div.up:hover{
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	width:80px;
-	height:80px;
-	background: rgb(101, 101, 101, 0.4);
+p.contact{
+	font-weight: bold;
+	font-size: 19px;
+}
+a{
+	text-decoration:none;
+	color: white;
 }
